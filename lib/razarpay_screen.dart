@@ -21,13 +21,11 @@ final TextEditingController _controller = TextEditingController();
     _razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, _handleExternalWallet);
   }
 
-  /// Razorpay options
   var options = {
-    'key': 'rzp_test_R8igK97LA8o9PA', // Replace with your Razorpay key
-    'amount': 1000000, // Amount in paise (1000 = ₹10)
+    'key': 'rzp_test_R8igK97LA8o9PA',
+    'amount': 1000000,
     'name': 'Acme Corp.',
     'description': 'Fine T-Shirt',
-    // 'order_id': 'order_EMBFqjDHEEn80l', // Use only if you generate order ID from backend
     'prefill': {
       'contact': '7895306931',
       'email': 'sharmayadvendra8@gmail.com',
@@ -57,7 +55,7 @@ final TextEditingController _controller = TextEditingController();
 
   @override
   void dispose() {
-    _razorpay.clear(); // Removes all listeners
+    _razorpay.clear();
     super.dispose();
   }
 
@@ -101,7 +99,7 @@ final TextEditingController _controller = TextEditingController();
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height:30,
                 ),
                 GestureDetector(
